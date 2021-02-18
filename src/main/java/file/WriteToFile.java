@@ -11,7 +11,7 @@ public class WriteToFile {
 
     private static void writeToFile() {
         try {
-            FileWriter myWriter = new FileWriter("filename.txt");
+            FileWriter myWriter = new FileWriter("C:\\ws-developer\\java-examples\\src\\main\\resources\\files\\filename.txt");
             myWriter.write("Files in Java might be tricky, but it is fun enough!");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
