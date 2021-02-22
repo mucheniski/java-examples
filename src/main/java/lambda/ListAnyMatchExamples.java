@@ -11,5 +11,14 @@ public class ListAnyMatchExamples {
 //  public boolean status(List<String> myArray) {
 //        return myArray.stream().anyMatch(item -> here the logic related to x.status());
 //  }
+  
+    private void verificarCompatibilidade(MediaType mediaType, String mediasAceitasHeader) throws HttpMediaTypeNotAcceptableException {
+        List<MediaType> mediaTypesAceitas = MediaType.parseMediaTypes(mediasAceitasHeader);
+        boolean mediaCompativel = mediaTypesAceitas.stream().anyMatch(mediaTypeAceita -> mediaTypeAceita.isCompatibleWith(mediaType));
+
+        if(!mediaCompativel) {
+            throw new HttpMediaTypeNotAcceptableException(mediaTypesAceitas);
+        }
+    }
 
 }
