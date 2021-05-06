@@ -10,8 +10,13 @@ public class DateExamples {
 	private static SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");;
 	
 	public static void main(String[] args) {
+
 		try {
-			exemplosDateBasicos();			
+
+            String valorData = "2021-04-13T18:40:53.199Z";
+            Date data = DateConversor.convertUTCToDate(valorData);
+            System.out.println("Data " + data);
+
 		} catch (ParseException e) {
 			System.out.println("Exception; " + e);
 		}
