@@ -22,6 +22,8 @@ public class DateExamples {
             System.out.println(horaMinutoFormater.format(data));
             System.out.println(diaFormater.format(data));
 
+            System.out.println(diaFormater.format(data) +"., "+ diaMesAnoFormater.format(data) +" às "+ horaMinutoFormater.format(data));
+
 
 		} catch (ParseException e) {
 			System.out.println("Exception; " + e);
