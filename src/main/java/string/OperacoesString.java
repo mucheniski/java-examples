@@ -18,7 +18,11 @@ public class OperacoesString {
 		nome2 = (nome2.length() < 5 ? StringUtils.leftPad(nome2, 5, "#") : "Entrou no truncate");
 		
 		System.out.println("Nome1: " + nome1);
-		System.out.println("Nome2: " + nome2);	
+		System.out.println("Nome2: " + nome2);
+
+		String frase = "primeira letra maiuscula";
+		String fMaiuscula = StringUtils.capitalize(frase);
+		System.out.println(fMaiuscula);
 	}
 	
 

@@ -1,15 +1,22 @@
 package date;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class DateExamples {
 	
 	// https://www.geeksforgeeks.org/date-class-java-examples/
+    private static Locale localeBR = new Locale("pt","BR");
 	private static SimpleDateFormat diaMesAnoFormater = new SimpleDateFormat("dd/MM/yyyy");
 	private static SimpleDateFormat horaMinutoFormater = new SimpleDateFormat("HH:mm");
-	private static SimpleDateFormat diaFormater = new SimpleDateFormat("E");
+	private static SimpleDateFormat diaFormater = new SimpleDateFormat("E",localeBR);
+
 
 	public static void main(String[] args) {
 
@@ -22,7 +29,8 @@ public class DateExamples {
             System.out.println(horaMinutoFormater.format(data));
             System.out.println(diaFormater.format(data));
 
-            System.out.println(diaFormater.format(data) +"., "+ diaMesAnoFormater.format(data) +" às "+ horaMinutoFormater.format(data));
+
+            System.out.println(StringUtils.capitalize(diaFormater.format(data)) +"., "+ diaMesAnoFormater.format(data) +" às "+ horaMinutoFormater.format(data));
 
 
 		} catch (ParseException e) {

@@ -53,6 +53,7 @@ public class SimpleDateFormatExample {
 }
 
 /*
+http://tutorials.jenkov.com/java-internationalization/simpledateformat.html
 Pattern Syntax
 You can use the following symbols in your formatting pattern:
 
