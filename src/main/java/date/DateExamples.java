@@ -10,6 +10,17 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 public class DateExamples {
+
+    /*
+    * exemplos no jasperReport
+    *
+    * Mostrar o dia
+    * new SimpleDateFormat("E", new java.util.Locale("pt","BR")).format($F{dataEfetivacao}) + "., "
+    *
+    * Mostrar a data completa
+    * new SimpleDateFormat("MM/dd/yyyy").format($F{dataEfetivacao}) +" às "+ new SimpleDateFormat("HH:mm").format($F{dataEfetivacao})
+    *
+    * */
 	
 	// https://www.geeksforgeeks.org/date-class-java-examples/
     private static Locale localeBR = new Locale("pt","BR");
@@ -22,8 +33,10 @@ public class DateExamples {
 
 		try {
 
-            String valorData = "2021-04-13T18:40:53.199Z";
-            Date data = DateConversor.convertUTCToDate(valorData);
+//            String valorData = "2021-04-13T18:40:53.199Z";
+//            Date data = DateConversor.convertUTCToDate(valorData);
+            String valorData = "2020-05-29";
+            Date data = DateConversor.convertStringToDate(valorData);
             System.out.println("Data " + data);
             System.out.println(diaMesAnoFormater.format(data));
             System.out.println(horaMinutoFormater.format(data));

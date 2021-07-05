@@ -16,4 +16,11 @@ public abstract class DateConversor {
         return dateFormat.parse(value);
     }
 
+    public static Date convertStringToDate(String value) throws ParseException {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+        return dateFormat.parse(value);
+    }
+
 }

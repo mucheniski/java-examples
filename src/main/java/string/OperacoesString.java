@@ -30,7 +30,7 @@ public class OperacoesString {
 //		System.out.println(fMaiuscula);
 
 		//String cpfCnpj = "05012993942";
-		String cpfCnpj = "62325248000180";
+		String cpfCnpj = "hhhhhhhhhhhhhhhhhhhh";
 
 
 		System.out.println(cpfCnpj.substring(3,cpfCnpj.length()-2));
@@ -42,7 +42,7 @@ public class OperacoesString {
 			}
 
 			MaskFormatter formatador = new MaskFormatter(mascara);
-			formatador.setValidCharacters("1234567890*");
+			formatador.setValidCharacters("1234567890");
 			formatador.setValueContainsLiteralCharacters(false);
 			String cpfFormatado = formatador.valueToString(cpfCnpj);
 			System.out.println(cpfFormatado);
